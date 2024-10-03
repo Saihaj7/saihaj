@@ -49,10 +49,12 @@ i am currently looking for an entry level dev position!`
           <br />
           <p className="whitespace-pre-wrap">{text}<span className={`${text?.length % 2 == 0 ? 'inline' : 'hidden'}`}>_</span></p>
           <br />
+          {/* 
           <p>
             i am currently building <Link className="bg-black/30 hover:bg-black/50 transition-colors" href="https://musicdrop.vercel.app">MusicDrop</Link> and
             awaiting Spotify's approval for production level API access.
           </p>
+          */}
         </div>
       </main>
 
