@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 //import Image from "next/image"
 import Link from "next/link"
 import { Github, Linkedin } from 'lucide-react'
+import Navbar from './Navbar'
 
 export default function Home() {
 
@@ -30,34 +31,29 @@ export default function Home() {
     }
   }, [])
 
-
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="p-4 ">
-        <nav className="flex justify-center space-x-4">
-          <div className='mr-auto' />
-          <Link href="/" className="text-gray-800 hover:text-gray-600">main</Link>
-          <Link href="/blog" className="text-gray-800 hover:text-gray-600">blog</Link>
-          <Link href="/contact" className="text-gray-800 hover:text-gray-600">projects</Link>
-          <Link href="/contact" className="text-gray-800 hover:text-gray-600">contact</Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="flex-grow container mx-auto px-4 py-8">
+
         <div className="w-3/4 mx-auto">
-          <div className=' pb-4'>
-            <h1 className="text-3xl font-semibold ">
+
+          <div className=' pb-10'>
+            <h1 className="text-3xl font-bold mb-1">
               saihaj brar
             </h1>
-            <h1 className='text-xl font-bold'>
-              <span className='text-gray-700'>major in math/stats, minor in comp sci @ uoft 24'</span>
+            <h1 className='text-xl font-semibold text-gray-700'>
+              major in math/stats, minor in comp sci @ uoft 24'
               <br />
             </h1>
           </div>
+          {/*
           <h1 className='font-semibold pl-4 pb-2'>
             about me
           </h1>
-          <p className="whitespace-pre-wrap text-sm">{text}<span className={`cursor`}>_</span></p>
+           */}
+          <p className="whitespace-pre-wrap text-sm md:text-base">{text}<span className={`cursor`}>_</span></p>
           <br />
           {/* 
           <h1 className='font-semibold pl-4 pb-2'>

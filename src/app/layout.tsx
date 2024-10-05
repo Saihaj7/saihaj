@@ -10,6 +10,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Saihaj Brar",
   description: "Saihaj Brar's personal website.",
+  icons: ['/favicon.ico']
 };
 
 export default function RootLayout({
@@ -18,6 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
+
     <html lang="en">
       <body
         className={`${jetbrains.className} bg-[#F5F5F5]`}
