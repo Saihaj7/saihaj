@@ -44,7 +44,7 @@ export default function Home() {
               saihaj brar
             </h1>
             <h1 className='text-xl font-semibold text-gray-700'>
-              major in math/stats, minor in comp sci @ uoft 24'
+              major in math/stats, minor in comp sci @ uoft 24&apos;
               <br />
             </h1>
           </div>
