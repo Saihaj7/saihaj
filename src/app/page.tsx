@@ -12,7 +12,7 @@ export default function Home() {
 
   // Updated binaryGenerator to generate more binary digits and use flex-wrap
   const binaryGenerator = (limit: number) => {
-    let fullBinary = []
+    const fullBinary = []
     for (let i = 0; i < limit; i++) {
       const binaryDigit = Math.random() < 0.5 ? '0' : '1'
       fullBinary.push(
