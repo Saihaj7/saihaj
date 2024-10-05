@@ -7,20 +7,32 @@ import Navbar from './Navbar'
 export default function Home() {
   const [text, setText] = useState<string>('')
   const [binary, setBinary] = useState<JSX.Element[]>([])
-
+  const spanSize = 10 // Size of each span in pixels
   const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nrecently ive been working on projects of my own while looking for entry level positions!!"
 
   // Updated binaryGenerator to generate more binary digits and use flex-wrap
-  const binaryGenerator = (limit: number) => {
+  const binaryGenerator = (rows: number, columns: number) => {
     const fullBinary = []
-    for (let i = 0; i < limit; i++) {
+    const totalSpans = rows * columns
+    for (let i = 0; i < totalSpans; i++) {
       const binaryDigit = Math.random() < 0.5 ? '0' : '1'
       fullBinary.push(
-        <span key={i} className='leading-none hover:text-gray-400 text-gray-200 hover:duration-0 duration-[0.5s] text-xs'>{binaryDigit}</span>
+        <span key={i} className='flex-none leading-none hover:text-gray-400 text-gray-200 hover:duration-0 duration-[0.5s] text-xs' style={{ width: spanSize - 2, height: spanSize }}>
+          {binaryDigit}
+        </span>
       )
     }
     return fullBinary
   }
+
+  const calculateSpans = () => {
+    const width = window.innerWidth
+    const height = window.innerHeight
+    const columns = Math.floor(width / spanSize)
+    const rows = Math.floor(height / spanSize)
+    return binaryGenerator(rows, columns)
+  }
+
 
   useEffect(() => {
     let i = 0
@@ -32,10 +44,20 @@ export default function Home() {
       }
     }
     typingEffect()
-    setBinary(binaryGenerator(10000))  // Increased limit to fill the background
+
+    const handleResize = () => {
+      setBinary(calculateSpans())
+    }
+
+    // Initial calculation
+    setBinary(calculateSpans())
+
+    // Recalculate on window resize
+    window.addEventListener('resize', handleResize)
 
     return () => {
       i = fullText.length
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 
@@ -45,7 +67,7 @@ export default function Home() {
       <main className="flex-grow container mx-auto z-50">
 
         {/* Binary Background */}
-        <div className='fixed inset-0  w-full h-full overflow-hidden flex flex-wrap'>
+        <div className='fixed inset-0 flex flex-wrap select-none flex-shrink'>
           {binary}
         </div>
 
