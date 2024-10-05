@@ -9,7 +9,7 @@ export default function Navbar() {
 
     return (
         <>
-            <header className="p-4 z-30">
+            <header className="p-4  relative">
                 <nav className="flex justify-center space-x-4">
                     <div className='mr-auto' />
                     <Link href="/" className="text-gray-800 hover:text-gray-600">main</Link>

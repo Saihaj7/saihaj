@@ -16,7 +16,7 @@ export default function Home() {
     for (let i = 0; i < limit; i++) {
       const binaryDigit = Math.random() < 0.5 ? '0' : '1'
       fullBinary.push(
-        <span key={i} className='leading-none hover:text-gray-300 text-gray-200 hover:duration-0 duration-[0.5s] text-xs'>{binaryDigit}</span>
+        <span key={i} className='leading-none hover:text-gray-400 text-gray-200 hover:duration-0 duration-[0.5s] text-xs'>{binaryDigit}</span>
       )
     }
     return fullBinary
@@ -42,17 +42,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col relative">
-      {/* Binary Background */}
-      <div className='fixed inset-0 z-0 w-full h-full overflow-hidden flex flex-wrap'>
-        {binary}
-      </div>
+      <main className="flex-grow container mx-auto z-50">
 
-      {/* Content Section */}
-      <Navbar />
+        {/* Binary Background */}
+        <div className='fixed inset-0  w-full h-full overflow-hidden flex flex-wrap'>
+          {binary}
+        </div>
 
-      <main className="flex-grow container mx-auto px-4 py-8 relative">
-        <div className="w-3/4 mx-auto">
-          <div className='pb-10'>
+
+        <Navbar />
+        <div className="w-3/4 mx-auto relative">
+          <div className='py-10'>
             <h1 className="text-3xl font-bold mb-1">
               saihaj brar
             </h1>
@@ -64,9 +64,10 @@ export default function Home() {
 
           <p className="whitespace-pre-wrap text-sm md:text-base">{text}<span className={`cursor`}>_</span></p>
         </div>
+
       </main>
 
-      <footer className="p-4 relative z-10">
+      <footer className="p-4 relative z-50">
         <div className="flex justify-center space-x-4">
           <a href="https://www.linkedin.com/in/saihajbrar/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
             <Linkedin size={42} />
