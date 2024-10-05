@@ -14,7 +14,7 @@ export default function Home() {
 
   //const fullText = "hey there! welcome to my personal page. \n\ni'm a UofT graduate who is aspiring to become a full stack dev fimiliar with an assortment of programming languages such as JavaScript + HTML/CSS, Python, Java, C/C++. i've mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases.\n\nthe job search has "
 
-  const fullText = "hey there! i'm a uoft graduate who is aspiring to become a full stack developer.\n\ni’m familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. i've mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nrecently i’ve been working on projects of my own while looking for entry level positions!!"
+  const fullText = "hey there! i\'m a uoft graduate who is aspiring to become a full stack developer.\n\ni\’m familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. i\'ve mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nrecently i\’ve been working on projects of my own while looking for entry level positions!!"
   useEffect(() => {
     let i = 0
     const typingEffect = () => {
