@@ -24,26 +24,3 @@
 .cursor {
   animation: blink 1s infinite;
 }
-
-.binary-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
-  animation: moveBinary 5s linear infinite;
-  white-space: pre-wrap;
-}
-
-@keyframes moveBinary {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
