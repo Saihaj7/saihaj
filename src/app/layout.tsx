@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 const jetbrains = JetBrains_Mono({
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${jetbrains.className} bg-[#F5F5F5]`}
       >
+        <Analytics />
         {children}
       </body>
     </html>
