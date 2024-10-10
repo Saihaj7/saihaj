@@ -108,7 +108,7 @@ export default function Projects() {
                                 CHATR
                             </h1>
                             <h1 className='text-xl font-semibold text-gray-700'>
-                                live text messenger.
+                                live text chat messenger.
                             </h1>
                             <p className="pt-2">
                                 React, Express.js, Node.js, Sockets.io, Axios, MongoDB
@@ -120,7 +120,7 @@ export default function Projects() {
                                 Symposium
                             </h1>
                             <h1 className='text-xl font-semibold text-gray-700'>
-                                education platform
+                                collaborative learning platform.
                             </h1>
                             <p className="pt-2">
                                 React, Python, Postgresql, MaterialUI, FastAPI, Docker, Git
