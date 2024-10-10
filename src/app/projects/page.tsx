@@ -1,12 +1,12 @@
 'use client'
 import Navbar from "../Navbar";
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Github, Linkedin, Mail } from 'lucide-react'
 
 export default function Projects() {
     //const [text, setText] = useState<string>('')
     const [binary, setBinary] = useState<JSX.Element[]>([])
-    //const spanSize = 10 // Size of each span in pixels
+    const spanSize = 10 // Size of each span in pixels
     //const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nive been working on projects of my own while looking for entry level positions!!"
 
     // Updated binaryGenerator to generate more binary digits and use flex-wrap
@@ -23,16 +23,30 @@ export default function Projects() {
         }
         return fullBinary
     }
-    /*
-        const calculateSpans = () => {
-            const width = window.innerWidth
-            const height = window.innerHeight
-            const columns = Math.floor(width / spanSize)
-            const rows = Math.floor(height / spanSize)
-            return binaryGenerator(rows, columns)
+
+    const calculateSpans = () => {
+        const width = window.innerWidth
+        const height = window.innerHeight
+        const columns = Math.floor(width / spanSize)
+        const rows = Math.floor(height / spanSize)
+        return binaryGenerator(rows, columns)
+    }
+    useEffect(() => {
+        const handleResize = () => {
+            setBinary(calculateSpans())
         }
-    
-    
+
+        // Initial calculation
+        setBinary(calculateSpans())
+
+        // Recalculate on window resize
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
+
+    /*
         useEffect(() => {
             let i = 0
             const typingEffect = () => {
@@ -60,6 +74,7 @@ export default function Projects() {
             }
         }, [])
     */
+
 
     return (
         <>
