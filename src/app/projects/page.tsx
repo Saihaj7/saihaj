@@ -2,14 +2,12 @@
 import Navbar from "../Navbar";
 import { useState, useEffect } from 'react'
 import { Github, Linkedin, Mail } from 'lucide-react'
-import Link from "next/link";
-import { redirect } from "next/dist/server/api-utils";
 
 export default function Projects() {
-    const [text, setText] = useState<string>('')
+    //const [text, setText] = useState<string>('')
     const [binary, setBinary] = useState<JSX.Element[]>([])
-    const spanSize = 10 // Size of each span in pixels
-    const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nive been working on projects of my own while looking for entry level positions!!"
+    //const spanSize = 10 // Size of each span in pixels
+    //const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nive been working on projects of my own while looking for entry level positions!!"
 
     // Updated binaryGenerator to generate more binary digits and use flex-wrap
     const binaryGenerator = (rows: number, columns: number) => {
@@ -25,42 +23,44 @@ export default function Projects() {
         }
         return fullBinary
     }
-
-    const calculateSpans = () => {
-        const width = window.innerWidth
-        const height = window.innerHeight
-        const columns = Math.floor(width / spanSize)
-        const rows = Math.floor(height / spanSize)
-        return binaryGenerator(rows, columns)
-    }
-
-
-    useEffect(() => {
-        let i = 0
-        const typingEffect = () => {
-            if (i < fullText.length) {
-                setText(fullText.slice(0, i + 1))
-                i++
-                setTimeout(typingEffect, 10)
+    /*
+        const calculateSpans = () => {
+            const width = window.innerWidth
+            const height = window.innerHeight
+            const columns = Math.floor(width / spanSize)
+            const rows = Math.floor(height / spanSize)
+            return binaryGenerator(rows, columns)
+        }
+    
+    
+        useEffect(() => {
+            let i = 0
+            const typingEffect = () => {
+                if (i < fullText.length) {
+                    setText(fullText.slice(0, i + 1))
+                    i++
+                    setTimeout(typingEffect, 10)
+                }
             }
-        }
-        typingEffect()
-
-        const handleResize = () => {
+            typingEffect()
+    
+            const handleResize = () => {
+                setBinary(calculateSpans())
+            }
+    
+            // Initial calculation
             setBinary(calculateSpans())
-        }
+    
+            // Recalculate on window resize
+            window.addEventListener('resize', handleResize)
+    
+            return () => {
+                i = fullText.length
+                window.removeEventListener('resize', handleResize)
+            }
+        }, [])
+    */
 
-        // Initial calculation
-        setBinary(calculateSpans())
-
-        // Recalculate on window resize
-        window.addEventListener('resize', handleResize)
-
-        return () => {
-            i = fullText.length
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
     return (
         <>
             <div className="min-h-screen flex flex-col relative">
