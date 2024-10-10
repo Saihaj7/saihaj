@@ -1,14 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Github, Linkedin } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import Navbar from './Navbar'
 
 export default function Home() {
     const [text, setText] = useState<string>('')
     const [binary, setBinary] = useState<JSX.Element[]>([])
     const spanSize = 10 // Size of each span in pixels
-    const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nrecently ive been working on projects of my own while looking for entry level positions!!"
+    const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nive been working on projects of my own while looking for entry level positions!!"
 
     // Updated binaryGenerator to generate more binary digits and use flex-wrap
     const binaryGenerator = (rows: number, columns: number) => {
@@ -98,6 +98,10 @@ export default function Home() {
                     <a href="https://github.com/Saihaj7" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
                         <Github size={42} />
                         <span className="sr-only">GitHub</span>
+                    </a>
+                    <a href="mailto:jahias17@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
+                        <Mail size={42} />
+                        <span className="sr-only">Email</span>
                     </a>
                 </div>
             </footer>
