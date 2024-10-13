@@ -14,7 +14,8 @@ export default function Navbar() {
                     <div className='mr-auto' />
                     <Link href="/" className="text-gray-800 hover:text-gray-600">main</Link>
                     <Link href="/projects" className="text-gray-800 hover:text-gray-600">projects</Link>
-                    <Link href="/contact" className="text-gray-800 hover:text-gray-600">contact</Link>
+                    <Link href="/blog" className="text-gray-800 hover:text-gray-600">blog</Link>
+                    {/*  <Link href="/contact" className="text-gray-800 hover:text-gray-600">contact</Link>*/}
                 </nav>
             </header>
         </>

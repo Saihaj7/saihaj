@@ -46,40 +46,10 @@ export default function Projects() {
         }
     }, [])
 
-    /*
-        useEffect(() => {
-            let i = 0
-            const typingEffect = () => {
-                if (i < fullText.length) {
-                    setText(fullText.slice(0, i + 1))
-                    i++
-                    setTimeout(typingEffect, 10)
-                }
-            }
-            typingEffect()
-    
-            const handleResize = () => {
-                setBinary(calculateSpans())
-            }
-    
-            // Initial calculation
-            setBinary(calculateSpans())
-    
-            // Recalculate on window resize
-            window.addEventListener('resize', handleResize)
-    
-            return () => {
-                i = fullText.length
-                window.removeEventListener('resize', handleResize)
-            }
-        }, [])
-    */
-
 
     return (
         <>
             <div className="min-h-screen flex flex-col relative">
-
                 <div className=" flex-grow container mx-auto z-50 self-center ">
                     <Navbar />
                 </div>

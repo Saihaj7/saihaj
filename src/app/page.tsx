@@ -8,7 +8,7 @@ export default function Home() {
     const [text, setText] = useState<string>('')
     const [binary, setBinary] = useState<JSX.Element[]>([])
     const spanSize = 10 // Size of each span in pixels
-    const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nive been working on projects of my own while looking for entry level positions!!"
+    const fullText = "hey there! i am a uoft graduate who is aspiring to become a full stack developer.\n\ni am familiar with an assortment of programming languages such as JavaScript + HTML / CSS, Python, Java, C / C++. ive mainly been doing webdev outside of school using React + Next.js with Postgresql/MongoDB databases, with experience using tools such as Git, Docker, and cloud services such as Heroku, Vercel, and Supabase.\n\nive been working on projects of my own while looking for entry level positions!! if you'd like to contact me you can do so via the email/linkedin links in the footer."
 
     // Updated binaryGenerator to generate more binary digits and use flex-wrap
     const binaryGenerator = (rows: number, columns: number) => {

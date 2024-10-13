@@ -60,8 +60,8 @@ export default function Projects() {
 
                 <Navbar />
 
-                <div className="w-3/4 mx-auto relative mt-28 border-gray-800 border-2 bg-[#F5F5F5] shadow-md rounded-lg p-3"   >
-                    you can contact me
+                <div className="w-3/4 mx-auto relative mt-28  p-3"   >
+                    coming soon!
                 </div>
 
             </main>
