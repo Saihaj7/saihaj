@@ -69,13 +69,13 @@ export default function Projects() {
                         <h1 className='text-xl font-semibold text-gray-700 mt-1'>
                             oct 17, 2024
                         </h1>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center space-y-3">
 
 
                             <p className="pt-5">
                                 The idea for MusicDrop came to me when I realized how often I wanted to send friends music across social media. Sometimes this desire spilled over toward people online who I was mutuals with.
                             </p>
-                            <Image className="my-2" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md2.png"} />
+                            <Image className="my-10" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md2.png"} />
                             <p className="pt-5">
                                 As far as I could tell, broadcasting your taste in music is commonplace everywhere. On Instagram I’d see friends post music in their stories or notes. On Twitter/X I’d see people post Spotify links with no further context. Just about every post on TikTok included music with fans congregating in comment sections.  I had even shared songs with a Twitter mutual of mine based on songs they had tweeted previously because I realized they shared similar tastes.
                             </p>
@@ -103,20 +103,20 @@ export default function Projects() {
                             <p className="pt-5">
                                 My biggest issues at this stage really stemmed from juggling Spotify’s OAuth2.0 refresh tokens to maintain synchronicity across the application. I’m still not entirely sure if I went about refreshing authentication tokens the right way. I needed the revalidated token at request time so the request to refresh an invalidated token had to have been made and processed before the user navigated to their personal page or share page. To get around this I used redirects within Next.js middleware to redirect to the refresh API route which would then redirect back having stored the original request path in a search parameter. This was the only workaround that I could come up with that didn’t give me issues but I remain suspicious, I feel like it’s a bandaid fix that may give me issues down the line.
                             </p>
-                            <Image className="my-2" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/spotifytoken.png"} />
+                            <Image className="my-10" height={1100} width={1100} alt="Spotify authorization code flow." src={"/spotifytoken.png"} />
                             <p className="pt-5">
                                 At this point I could begin the most dreaded part for me: designing a user interface. I borrowed ideas from elsewhere since I had no desire to reinvent the wheel. The finished product generally followed along the lines of the Spotify playlist page which I thought would help with easing the learning curve for new users. This stage made me realize how much I had left to learn in terms of creating an attractive UI. It also made me realize how much I take for granted with the UI’s I interact with everyday. Nowadays when I visit a site or open an app I find myself taking a mental note of where certain elements are placed and how they all work together to create an enjoyable user experience.
                             </p>
-                            <Image className="my-2" height={1100} width={1100} alt="Spotify's playlist page." src={"/playlist.png"} />
-                            <Image className="my-2" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md1.png"} />
+                            <Image className="my-10" height={1100} width={1100} alt="Spotify's playlist page." src={"/playlist.png"} />
+                            <Image className="mb-10" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md1.png"} />
 
 
                             <p className="pt-5">
                                 I experimented with a couple different layouts unique to the public share page but they made making the application responsive across many screen sizes a nightmare so I stuck with an identical layout as the personal page apart from the added feature of submission.
                             </p>
-                            <Image className="my-2" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md3.png"} />
-                            <Image className="my-2" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md4.png"} />
-                            <Image className="my-2" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md6.png"} />
+                            <Image className="mt-10" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md3.png"} />
+                            <Image className="my-10" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md4.png"} />
+                            <Image className="mb-10" height={1100} width={1100} alt="MusicDrop's dropbox page." src={"/md6.png"} />
                             <p className="pt-5">
                                 Once MusicDrop reached the point where it was usable and not terrible looking l got some friends to test it out. The most noticeable issue seemed to be the onboarding. I thought about onboarding a little beforehand and added a help button that would explain some features but nobody seemed inclined to press it when confused. So I realized I’d have to shove it in new user’s faces on the first visit.
                             </p>
@@ -124,7 +124,7 @@ export default function Projects() {
                                 After that initial testing phase I continued to improve upon the UI, added notifications, safeguarded API routes, and created submission limits to prevent spam. I decided on using Vercel to host because it is easily integrated with Next.js and Supabase and fixed any remaining caching issues that popped up in production builds.
                             </p>
 
-                            <Image className="my-2" height={500} width={500} alt="MusicDrop's dropbox page." src={"/md5.png"} />
+                            <Image className="my-10" height={500} width={500} alt="MusicDrop's dropbox page." src={"/md5.png"} />
                             <p className="pt-5 ">
                                 Having completed everything I wanted for MusicDrop 1.0, I submitted an application to Spotify for production level API access to officially launch the site. I plan to market MusicDrop on social media to see if the idea resonates before developing more customization features. For monetization, I aim to keep the application free; if usage grows significantly, I might consider adding ads to cover Vercel/Supabase hosting costs.
                             </p>
