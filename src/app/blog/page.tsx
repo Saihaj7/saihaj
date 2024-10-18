@@ -61,7 +61,7 @@ export default function Projects() {
 
                 <Navbar />
 
-                <div className="w-3/4 mx-auto relative mt-5  p-3"   >
+                <div className="w-full md:w-3/4 mx-auto relative mt-5  p-3"   >
                     <div className="shadow-md rounded-lg p-3 w-full border-gray-800 border-2 bg-[#F5F5F5]  ">
                         <h1 className="text-3xl font-bold mb-1">
                             Building MusicDrop
